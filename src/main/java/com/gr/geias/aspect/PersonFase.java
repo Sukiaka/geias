@@ -20,6 +20,7 @@ public class PersonFase {
 
     @After(value = POINT_CUT)
     public void doAfterAdvice(JoinPoint joinPoint){
+        System.out.println("hello, world");
         Object[] args = joinPoint.getArgs();
         Integer personId = (Integer)args[0];
         System.out.println("删除"+personId);
